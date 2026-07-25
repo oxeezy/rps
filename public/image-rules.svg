@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="305" height="271" viewBox="0 0 305 271" fill="none">
-  <path d="M152.5 25 270 225H35L152.5 25Z" stroke="#B1B4C5" stroke-width="15" stroke-linejoin="round"/>
-  <circle cx="152.5" cy="40" r="38" fill="#fff" stroke="#ECA922" stroke-width="13"/>
-  <circle cx="48" cy="225" r="38" fill="#fff" stroke="#5671F5" stroke-width="13"/>
-  <circle cx="257" cy="225" r="38" fill="#fff" stroke="#DD405D" stroke-width="13"/>
-  <text x="152.5" y="46" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#3B4363">SCISSORS</text>
-  <text x="48" y="231" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#3B4363">PAPER</text>
-  <text x="257" y="231" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#3B4363">ROCK</text>
-</svg>
