@@ -1,0 +1,448 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #20254a 0%,
+      #11152f 55%,
+      #0b0e20 100%
+    );
+
+  font-family: 'Orbitron', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+section {
+  width: 950px;
+  max-width: 95%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+  width: 100%;
+  height: 230px;
+
+  border: 2px solid #30365e;
+  border-radius: 18px;
+
+  background: rgba(20, 24, 51, 0.95);
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    2fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4);
+
+  position: relative;
+}
+
+
+/* =========================
+   BANNER SECTIONS
+========================= */
+
+.banner-item {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.banner-item::after {
+  content: '';
+
+  position: absolute;
+
+  right: 0;
+  top: 15%;
+
+  height: 70%;
+
+  width: 1px;
+
+  background: #30365e;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.banner-item img {
+  width: 65px;
+  height: 65px;
+
+  position: relative;
+  z-index: 2;
+
+  filter:
+    drop-shadow(
+      0 8px 12px rgba(0, 0, 0, 0.35)
+    );
+}
+
+
+/* =========================
+   ICON COLORS
+========================= */
+
+.banner-item.rock {
+  background: rgba(220, 46, 78, 0.12);
+}
+
+.banner-item.rock img {
+  background: #dc2e4e;
+
+  padding: 14px;
+
+  border-radius: 50%;
+
+  border: 5px solid #a51d36;
+}
+
+
+.banner-item.paper {
+  background: rgba(72, 101, 244, 0.12);
+}
+
+.banner-item.paper img {
+  background: #4865f4;
+
+  padding: 14px;
+
+  border-radius: 50%;
+
+  border: 5px solid #304bc2;
+}
+
+
+.banner-item.scissors {
+  background: rgba(236, 169, 34, 0.12);
+}
+
+.banner-item.scissors img {
+  background: #eca922;
+
+  padding: 14px;
+
+  border-radius: 50%;
+
+  border: 5px solid #b77d0c;
+}
+
+
+.banner-item.lizard {
+  background: rgba(131, 79, 227, 0.12);
+}
+
+.banner-item.lizard img {
+  background: #834fe3;
+
+  padding: 14px;
+
+  border-radius: 50%;
+
+  border: 5px solid #5c2db1;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.banner-title {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.banner-title h1 {
+  color: white;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  letter-spacing: 2px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   MODE SELECTION
+========================= */
+
+.mode-selection {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 35px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================
+   MODE BOX
+========================= */
+
+.mode {
+  width: 190px;
+  height: 150px;
+
+  border-radius: 15px;
+
+  background: #171b3a;
+
+  border: 2px solid #30365e;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.mode img {
+  width: 85px;
+  max-height: 80px;
+
+  object-fit: contain;
+}
+
+.mode p {
+  margin-top: 10px;
+
+  color: #aaa9d8;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   MODE HOVER
+========================= */
+
+.mode:hover {
+  transform: translateY(-5px);
+
+  border-color: #746cff;
+
+  box-shadow:
+    0 10px 25px rgba(116, 108, 255, 0.2);
+}
+
+
+/* =========================
+   SELECTED MODE
+========================= */
+
+.mode.active {
+  border-color: #746cff;
+
+  background: #20264a;
+
+  box-shadow:
+    0 0 25px rgba(116, 108, 255, 0.35);
+
+  transform: translateY(-5px);
+}
+
+.mode.active p {
+  color: white;
+}
+
+
+/* =========================
+   START BUTTON
+========================= */
+
+.button {
+  margin-top: 30px;
+}
+
+.button a {
+  text-decoration: none;
+}
+
+#start {
+  width: 230px;
+  height: 60px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #292e4c;
+
+  color: #777b9e;
+
+  font-family: 'Orbitron', sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: not-allowed;
+
+  transition: 0.2s;
+}
+
+#start p {
+  margin: 0;
+}
+
+
+/* =========================
+   ACTIVE START BUTTON
+========================= */
+
+#start.active {
+  background: white;
+
+  color: #15182f;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+#start.active:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .banner {
+    height: 190px;
+
+    grid-template-columns:
+      1fr
+      1fr
+      1.8fr
+      1fr
+      1fr;
+  }
+
+  .banner-item img {
+    width: 48px;
+    height: 48px;
+
+    padding: 9px;
+  }
+
+  .banner-title h1 {
+    font-size: 22px;
+  }
+
+  .mode {
+    width: 150px;
+    height: 135px;
+  }
+
+  .mode-selection {
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  section {
+    max-width: 96%;
+  }
+
+  .banner {
+    height: 150px;
+  }
+
+  .banner-item img {
+    width: 38px;
+    height: 38px;
+
+    padding: 7px;
+
+    border-width: 3px;
+  }
+
+  .banner-title h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .mode {
+    width: 135px;
+    height: 120px;
+  }
+
+  .mode img {
+    width: 65px;
+  }
+
+  .mode p {
+    font-size: 13px;
+  }
+
+  #start {
+    width: 200px;
+  }
+}
